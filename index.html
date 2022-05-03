@@ -18,29 +18,28 @@
     </head>
 
     <body>
-        <div class="container content">
-            <div>
-                <h2 class="text-center mt-5">Crypto Chart 📈</h2>
-            </div>
-            <div class="justify-content-md-center">
-                <div class="col-md-auto ml-5">
-
-                    <div id="container">
-
+        <div class="container" id="page-container">
+            <div id="content-wrap">
+                <div>
+                    <h2 class="text-center mt-5 ml-3">Crypto Chart 📈</h2>
+                </div>
+                <div class="justify-content-md-center">
+                    <div class="row justify-content-center mt-5 mb-5">
+                        <button class="btn btn-success" onclick="getData()">Get data</button>
                     </div>
                 </div>
             </div>
+
+            <footer class="foot" id="footer">
+                <div class="text-center">
+                    <a href="https://github.com/lagerqvr">
+                        <p class="text-muted foot">Github @ Rasmus Lagerqvist 2022</p>
+                    </a>
+                </div>
+            </footer>
+
+            <script src="js/script.js"></script>
         </div>
-
-        <footer class="foot">
-            <div class="text-center">
-                <a href="https://github.com/lagerqvr">
-                    <p class="text-muted foot">Github @ Rasmus Lagerqvist 2022</p>
-                </a>
-            </div>
-        </footer>
-
-        <script src="js/script.js"></script>
     </body>
 
 </html>
