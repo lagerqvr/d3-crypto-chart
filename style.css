@@ -1,0 +1,19 @@
+body{ height:100vh; margin:0; }
+
+header{ min-height:50px; background:lightcyan; }
+
+footer{ min-height:50px; }
+
+body{ 
+  display:flex; 
+  flex-direction:column; 
+}
+
+footer{
+  margin-top:auto; 
+}
+
+.foot {
+    font-size: 0.8em;
+    height: 20px;
+}
