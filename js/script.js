@@ -1,13 +1,15 @@
+// Projekt 2 - JS, d3.js
 
-// Del 1
 let today = new Date();
+
+// Start date = 30 days back
 let start = new Date(today);
 
-// Start date
+// Formatting start date for URL
 start.setDate(start.getDate() - 29);
 start = start.getFullYear() + '-' + (start.getMonth() + 1) + '-' + start.getDate();
 
-// End date
+// End date = today + formatting for URL
 let end = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 
 // Currency
@@ -16,15 +18,29 @@ let currency = 'BTC-EUR';
 // Granularity
 let granularity = '86400';
 
-// Construction of URL for GET-request
-const URL = 'https://api.pro.coinbase.com/products/' + currency + '/candles?start=' + start + '&end=' + end + '&granularity=' + granularity;
-
 async function getData() {
+
+    // Construction of URL for GET-request
+    const URL = 'https://api.pro.coinbase.com/products/' + currency + '/candles?start=' + start + '&end=' + end + '&granularity=' + granularity;
+
     const resp = await fetch(URL);
     const data = await resp.json();
 
     console.log(URL);
     console.log(data);
+
+    // We call on our function to render a candlestick chart
+    renderData(data);
+};
+
+// Function for rendering candlestick chart
+const renderData = (data) => {
+    console.log(data);
+}
+
+// We render our chart on page load
+window.onload = function () {
+    getData();
 };
 
 /* console.log(end);
