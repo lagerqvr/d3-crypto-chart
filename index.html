@@ -20,16 +20,16 @@
     <body>
         <div class="container">
             <div>
-                <h2 class="text-center mt-5 mb-5">Crypto Chart 📈</h2>
+                <h2 class="text-center mt-5 mb-3">Crypto Chart 📈</h2>
             </div>
-            <div class="mt-5 mb-5">
+            <div class="mt-5 mb-3 ml-4">
 
                 <!-- Button from Del 1 is useless due to our function running on page refresh -->
                 <!-- <button type="button" class="btn btn-success" onclick="getData()">Get data</button> -->
                 <div class="row ml-2">
                     <div class="form-group pull-right">
                         <label for="option-select" class="control-label mb-0 text-muted"><small>Currency</small></label>
-                        <select onchange="currencyChange(this.value);" class="form-control option-select" id="currency">
+                        <select onchange="currencyChange(this.value)" class="form-control option-select" id="currency">
                             <option value="BTC-EUR" selected>BTC-EUR</option>
                             <option value="ETH-EUR">ETH-EUR</option>
                             <option value="ADA-EUR">ADA-EUR</option>
@@ -40,7 +40,7 @@
                     <div class="form-group pull-right ml-2">
                         <label for="option-select" class="control-label mb-0 text-muted"><small>Timespan</small>
                         </label>
-                        <select onchange="timespanChange(this.value);" class="form-control option-select" id="timespan">
+                        <select onchange="timespanChange(this.value)" class="form-control option-select" id="timespan">
                             <option value="30" selected>30 days</option>
                             <option value="60">60 days</option>
                             <option value="120">120 days</option>
@@ -48,21 +48,24 @@
                         </select>
                     </div>
                 </div>
+                <hr>
 
+                <div class="ml-0 bg" id="chart">
+
+                </div>
+
+                <div class="row justify-content-center mt-2">
+                    <footer class="foot" id="footer">
+                        <div>
+                            <a href="https://github.com/lagerqvr">
+                                <p class="text-muted foot">Github @ Rasmus Lagerqvist 2022</p>
+                            </a>
+                        </div>
+                    </footer>
+                </div>
+
+                <script src="js/script.js"></script>
             </div>
-
-            <div class="row justify-content-center">
-                <footer class="foot" id="footer">
-                    <div>
-                        <a href="https://github.com/lagerqvr">
-                            <p class="text-muted foot">Github @ Rasmus Lagerqvist 2022</p>
-                        </a>
-                    </div>
-                </footer>
-            </div>
-
-            <script src="js/script.js"></script>
-        </div>
     </body>
 
 </html>
