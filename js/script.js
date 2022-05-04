@@ -26,7 +26,6 @@ async function getData() {
     const resp = await fetch(URL);
     const data = await resp.json();
 
-    console.log(URL);
     console.log(data);
 
     // We call on our function to render a candlestick chart
@@ -34,13 +33,43 @@ async function getData() {
 };
 
 // Function for changing currency onchange
-const currencyChange = (val) => {
-    console.log("currency");
+async function currencyChange(val) {
+    // Construction of URL for GET-request
+    const URL = 'https://api.pro.coinbase.com/products/' + val + '/candles?start=' + start + '&end=' + end + '&granularity=' + granularity;
+
+    const resp = await fetch(URL);
+    const data = await resp.json();
+
+    console.log(URL);
+
+    // We call on our function to render a candlestick chart
+    renderData(data);
 }
 
 // Function for changing timespan onchange
-const timespanChange = (val) => {
-    console.log("timespan");
+async function timespanChange(val) {
+    let start = new Date(today);
+
+    // Formatting start date for URL
+    start.setDate(start.getDate() - val);
+    start = start.getFullYear() + '-' + (start.getMonth() + 1) + '-' + start.getDate();
+
+    // End date = today + formatting for URL
+    let end = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+
+    let currency = document.getElementById("currency").value;
+
+    // Construction of URL for GET-request
+    const URL = 'https://api.pro.coinbase.com/products/' + currency + '/candles?start=' + start + '&end=' + end + '&granularity=' + granularity;
+
+    const resp = await fetch(URL);
+    const data = await resp.json();
+
+    console.log(URL);
+    console.log(currency);
+
+    // We call on our function to render a candlestick chart
+    renderData(data);
 }
 
 // Function for rendering candlestick chart
