@@ -30,7 +30,7 @@
 
                     <div class="form-group pull-right">
                         <label for="option-select" class="control-label mb-0 text-muted"><small>Currency</small></label>
-                        <select onchange="" class="form-control option-select" id="currency">
+                        <select onchange="currencyChange(this.value);" class="form-control option-select" id="currency">
                             <option value="BTC-EUR" selected>BTC-EUR</option>
                             <option value="ETH-EUR">ETH-EUR</option>
                             <option value="ADA-EUR">ADA-EUR</option>
@@ -41,7 +41,7 @@
                     <div class="form-group pull-right ml-2">
                         <label for="option-select" class="control-label mb-0 text-muted"><small>Timespan</small>
                         </label>
-                        <select onchange="" class="form-control option-select" id="timespan">
+                        <select onchange="timespanChange(this.value);" class="form-control option-select" id="timespan">
                             <option value="30" selected>30 days</option>
                             <option value="60">60 days</option>
                             <option value="120">120 days</option>

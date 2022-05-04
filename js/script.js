@@ -33,6 +33,16 @@ async function getData() {
     renderData(data);
 };
 
+// Function for changing currency onchange
+const currencyChange = (val) => {
+    console.log("currency");
+}
+
+// Function for changing timespan onchange
+const timespanChange = (val) => {
+    console.log("timespan");
+}
+
 // Function for rendering candlestick chart
 const renderData = (data) => {
     console.log(data);
