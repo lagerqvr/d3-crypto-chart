@@ -9,22 +9,6 @@
     height: 20px;
 }
 
-#page-container {
-    position: relative;
-    min-height: 93vh;
-  }
-  
-#content-wrap {
-    padding-bottom: 0.5rem;    /* Footer height */
-} 
-  
-#footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;            /* Footer height */
-}
-
 .option-select {
     height: 2.5rem;
     padding: 0.5rem 0.5rem;
@@ -37,6 +21,22 @@
     -webkit-appearance: none;
     outline: none;
 }
+
+#page-container {
+    position: relative;
+    min-height: 93vh;
+  }
+  
+#content-wrap {
+    padding-bottom: 0.5rem;    /* Footer height */
+} 
+  
+#footer {
+    position: absolute;
+    bottom: 0;
+    height: 2.5rem;            /* Footer height */
+}
+
 
 
 
