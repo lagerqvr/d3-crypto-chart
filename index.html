@@ -22,12 +22,11 @@
             <div>
                 <h2 class="text-center mt-5 mb-5">Crypto Chart 📈</h2>
             </div>
-            <div class="justify-content-md-center">
-                <div class="row justify-content-left mt-5 mb-5">
+            <div class="mt-5 mb-5">
 
-                    <!-- Button is useless due to our function running on page refresh -->
-                    <!-- <button type="button" class="btn btn-success" onclick="getData()">Get data</button> -->
-
+                <!-- Button from Del 1 is useless due to our function running on page refresh -->
+                <!-- <button type="button" class="btn btn-success" onclick="getData()">Get data</button> -->
+                <div class="row ml-2">
                     <div class="form-group pull-right">
                         <label for="option-select" class="control-label mb-0 text-muted"><small>Currency</small></label>
                         <select onchange="currencyChange(this.value);" class="form-control option-select" id="currency">
@@ -49,9 +48,10 @@
                         </select>
                     </div>
                 </div>
+
             </div>
 
-            <div class="row justify-content-md-center">
+            <div class="row justify-content-center">
                 <footer class="foot" id="footer">
                     <div>
                         <a href="https://github.com/lagerqvr">
@@ -60,7 +60,6 @@
                     </div>
                 </footer>
             </div>
-
 
             <script src="js/script.js"></script>
         </div>
