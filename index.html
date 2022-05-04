@@ -18,25 +18,46 @@
     </head>
 
     <body>
-        <div class="container" id="page-container">
-            <div id="content-wrap">
-                <div>
-                    <h2 class="text-center mt-5 ml-3">Crypto Chart 📈</h2>
-                </div>
-                <div class="justify-content-md-center">
-                    <div class="row justify-content-center mt-5 mb-5">
-                        <button type="button" class="btn btn-success" onclick="getData()">Get data</button>
+        <div class="container">
+            <div>
+                <h2 class="text-center mt-5 ml-3 mb-5">Crypto Chart 📈</h2>
+            </div>
+            <div class="justify-content-md-center">
+                <div class="row justify-content-left mt-5 mb-5">
+
+                    <!-- Button is useless due to our function running on page refresh -->
+                    <!-- <button type="button" class="btn btn-success" onclick="getData()">Get data</button> -->
+
+                    <div class="form-group pull-right">
+                        <label for="option-select" class="control-label mb-0 text-muted"><small>Currency</small></label>
+                        <select onchange="" class="form-control option-select" id="currency">
+                            <option value="BTC-EUR" selected>BTC-EUR</option>
+                            <option value="ETH-EUR">ETH-EUR</option>
+                            <option value="ADA-EUR">ADA-EUR</option>
+                            <option value="SOL-EUR">SOL-EUR</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group pull-right ml-2">
+                        <label for="option-select" class="control-label mb-0 text-muted"><small>Timespan</small>
+                        </label>
+                        <select onchange="" class="form-control option-select" id="timespan">
+                            <option value="30" selected>30 days</option>
+                            <option value="60">60 days</option>
+                            <option value="120">120 days</option>
+                            <option value="365">1 year</option>
+                        </select>
                     </div>
                 </div>
             </div>
 
-            <footer class="foot" id="footer">
+            <!-- <footer class="foot" id="footer">
                 <div class="text-center">
                     <a href="https://github.com/lagerqvr">
                         <p class="text-muted foot">Github @ Rasmus Lagerqvist 2022</p>
                     </a>
                 </div>
-            </footer>
+            </footer> -->
 
             <script src="js/script.js"></script>
         </div>
