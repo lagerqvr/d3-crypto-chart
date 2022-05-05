@@ -9,6 +9,12 @@
     height: 20px;
 }
 
+.bg {
+    background-color: rgba(241, 241, 241, 0.659);
+    padding-top: 25px;
+    border-radius: 5px;
+}
+
 .option-select {
     height: 2.5rem;
     padding: 0.5rem 0.5rem;
@@ -22,20 +28,12 @@
     outline: none;
 }
 
-#page-container {
-    position: relative;
-    min-height: 93vh;
+/* Media queries for footer */
+@media screen and (max-height: 805px) {
+    #footer {
+        display: none;
+    }
   }
-  
-#content-wrap {
-    padding-bottom: 0.5rem;    /* Footer height */
-} 
-  
-#footer {
-    position: absolute;
-    bottom: 0;
-    height: 2.5rem;            /* Footer height */
-}
 
 
 

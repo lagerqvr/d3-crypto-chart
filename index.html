@@ -15,6 +15,27 @@
         <title>Crypto Chart - Rasmus Lagerqvist</title>
         <link rel="icon"
             href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>">
+
+        <style>
+            /* Candlestick chart CSS */
+            .axis path {
+                stroke: #000;
+                shape-rendering: crispEdges;
+            }
+
+            .axis line {
+                stroke: #000;
+                shape-rendering: crispEdges;
+            }
+
+            line.ext,
+            line.ext1,
+            line.ext2 {
+                stroke: #000;
+                stroke-width: 1;
+                shape-rendering: crispEdges;
+            }
+        </style>
     </head>
 
     <body>
@@ -49,10 +70,8 @@
                     </div>
                 </div>
                 <hr>
-
-                <div class="ml-0 bg" id="chart">
-
-                </div>
+            </div>
+            <div class="ml-4 bg" id="chart">
 
                 <div class="row justify-content-center mt-2">
                     <footer class="foot" id="footer">
