@@ -26,8 +26,6 @@ async function getData() {
     const resp = await fetch(URL);
     const data = await resp.json();
 
-    console.log(data);
-
     // We call on our function to render a candlestick chart
     renderData(data);
 };
@@ -49,8 +47,6 @@ async function currencyChange(val) {
 
     const resp = await fetch(URL);
     const data = await resp.json();
-
-    console.log(URL);
 
     // We call on our function to render a candlestick chart
     renderData(data);
@@ -75,9 +71,6 @@ async function timespanChange(val) {
 
     const resp = await fetch(URL);
     const data = await resp.json();
-
-    console.log(URL);
-    console.log(currency);
 
     // We call on our function to render a candlestick chart
     renderData(data);
@@ -106,7 +99,7 @@ const renderData = (vals) => {
             };
 
             let w = 1080 - m.l - m.r;
-            let h = 540 - m.t - m.b;
+            let h = 480 - m.t - m.b;
 
             // We loop over values from data object
             // r = result
@@ -120,10 +113,6 @@ const renderData = (vals) => {
                 r.volume = +r[5];
             });
 
-            // We declare x
-            let x = d3.scaleTime().range([0, w]);
-            x.domain(d3.extent(vals, function (r) { return new Date(r.date); }));
-
             // We declare y
             let y = d3.scaleLinear().range([h, 0]);
             y.domain([0, d3.max(vals, function (r) { return r.close; })]);
@@ -131,6 +120,10 @@ const renderData = (vals) => {
             // We declare y2
             let y2 = d3.scaleLinear().range([h, 0]);
             y2.domain([0, d3.max(vals, function (r) { return r.volume; })]);
+
+            // We declare x
+            let x = d3.scaleTime().range([0, w]);
+            x.domain(d3.extent(vals, function (r) { return new Date(r.date); }));
 
             // We target our chart div with D3
             let s = d3.select("#chart")
@@ -206,7 +199,7 @@ const renderData = (vals) => {
                 });
 
             // Colors for candlesticks
-            let red = "#F44336"
+            let red = "#EF4444"
             let green = "#00C853"
 
             s.selectAll("rect")
